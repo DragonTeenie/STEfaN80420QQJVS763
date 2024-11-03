@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kerst xLights Show Controller</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-image: url('path/to/christmas-background.jpg'); /* Voeg hier een kerstachtergrond toe */
+            background-size: cover;
+            background-position: center;
+            font-family: 'Arial', sans-serif;
+            color: #ffffff;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-around;
+            width: 90%;
+            flex-wrap: wrap;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.7); /* Transparante achtergrond voor de container */
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        .button-container {
+            flex: 1 1 20%;
+            margin: 1%;
+            text-align: center;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            transition: transform 0.2s;
+            backdrop-filter: blur(5px); /* Blur effect voor de knoppen */
+        }
+
+        .button-container:hover {
+            transform: scale(1.05);
+        }
+
+        button {
+            width: 100%;
+            padding: 10% 0;
+            border: none;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 0.3s;
+            position: relative; /* Voor het toevoegen van een kerstversiering */
+        }
+
+        /* Verschillende kleuren voor elke knop met kerstthema */
+        .show1 {
+            background-color: #ff4040; /* Rood */
+        }
+
+        .show2 {
+            background-color: #28a745; /* Groene tint */
+        }
+
+        .show3 {
+            background-color: #ffc107; /* Goud */
+        }
+
+        .show4 {
+            background-color: #007bff; /* Blauw */
+        }
+
+        img {
+            width: 60%;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        .title {
+            font-size: 14px;
+            margin-top: 5px;
+            font-weight: bold; /* Maak de tekst vetgedrukt */
+        }
+
+        /* Kerstversiering op de knoppen */
+        .button-container::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background-image: url('path/to/snowflakes.png'); /* Voeg hier een sneeuwvlokafbeelding toe */
+            opacity: 0.1; /* Maak het lichtjes zichtbaar */
+            pointer-events: none; /* Zorg dat de knop functioneel blijft */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="button-container">
+            <form action="show1.php" method="post">
+                <button type="submit" class="show1">
+                    <img src="path/to/christmas-tree1.jpg" alt="Show 1"> <!-- Kerstboom afbeelding -->
+                    <div class="title">Kerst Show 1</div>
+                </button>
+            </form>
+        </div>
+        <div class="button-container">
+            <form action="show2.php" method="post">
+                <button type="submit" class="show2">
+                    <img src="path/to/christmas-tree2.jpg" alt="Show 2"> <!-- Kerstboom afbeelding -->
+                    <div class="title">Kerst Show 2</div>
+                </button>
+            </form>
+        </div>
+        <div class="button-container">
+            <form action="show3.php" method="post">
+                <button type="submit" class="show3">
+                    <img src="path/to/christmas-tree3.jpg" alt="Show 3"> <!-- Kerstboom afbeelding -->
+                    <div class="title">Kerst Show 3</div>
+                </button>
+            </form>
+        </div>
+        <div class="button-container">
+            <form action="show4.php" method="post">
+                <button type="submit" class="show4">
+                    <img src="path/to/christmas-tree4.jpg" alt="Show 4"> <!-- Kerstboom afbeelding -->
+                    <div class="title">Kerst Show 4</div>
+                </button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
